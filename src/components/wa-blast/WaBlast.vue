@@ -32,6 +32,7 @@ import ImageDark from "@/assets/wa-blast-dark.png";
         >
           <li>Kirim pesan massal ke ribuan kontak sekaligus.</li>
           <li>Dukungan template & variabel pesan.</li>
+          <li>Dukungan Gambar, File & Tautan Kirim Katalog, Invoice, dll.</li>
           <li>Personalisasi pesan untuk setiap penerima.</li>
           <li>Laporan delivery & status pesan.</li>
         </ul>

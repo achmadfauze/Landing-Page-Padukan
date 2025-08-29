@@ -5,7 +5,6 @@ const mode = useColorMode();
 import { Button } from "@/components/ui/button";
 import ImageLight from "@/assets/pos-retail-light.png";
 import ImageDark from "@/assets/pos-retail-dark.png";
-
 </script>
 
 <template>
@@ -31,7 +30,8 @@ import ImageDark from "@/assets/pos-retail-dark.png";
           class="list-disc list-inside space-y-2 text-gray-700 dark:text-gray-300"
         >
           <li>Manajemen stok & inventori otomatis.</li>
-          <li>Laporan penjualan real-time.</li>
+          <li>Akses Barang secara real-time.</li>
+          <li>Laporan penjualan dan keuangan lengkap.</li>
           <li>Pencatatan penjualan dan transaksi yang cepat.</li>
           <li>Multi-user & multi-cabang.</li>
         </ul>

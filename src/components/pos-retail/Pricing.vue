@@ -19,7 +19,7 @@ enum PopularPlan {
 interface PlanProps {
   title: string;
   popular: PopularPlan;
-  price: number;
+  price: string;
   description: string;
   buttonText: string;
   benefitList: string[];
@@ -27,46 +27,51 @@ interface PlanProps {
 
 const plans: PlanProps[] = [
   {
-    title: "Gratis",
+    title: "Pro",
     popular: 0,
-    price: 0,
-    description:
-      "Cocok untuk usaha kecil yang baru memulai menggunakan sistem POS.",
-    buttonText: "Mulai Gratis",
+    price: "2.500.000",
+    description: "Fleksibel & Andal untuk Bisnis Bertumbuh",
+    buttonText: "Langganan Pro",
     benefitList: [
-      "1 kasir pengguna",
-      "Maksimal 100 transaksi/bulan",
-      "Laporan dasar penjualan",
-      "Dukungan komunitas",
+      "Unlimited User",
+      "Full service outlet",
+      "Manajemen Stock",
+      "Akses laporan real-time",
+      "Dukungan prioritas",
+      "Software & update 1 tahun",
+    ],
+  },
+  {
+    title: "Enterprice",
+    popular: 1,
+    price: "4.500.000", // harga per bulan
+    description: "Skalabilitas Maksimal untuk Bisnis Besar & Terintegrasi.",
+    buttonText: "Langganan Enterprice",
+    benefitList: [
+      "Unlimited User",
+      "Full service outlet",
+      "Manajemen stok",
+      "Akses laporan real-time & Dukungan prioritas",
+      "Entry data produk & karyawan",
+      "Perangkat Komputer",
+      "1 Printer, 1 Scanner & 1 Laci Uang",
+      "Software & update 1 tahun",
     ],
   },
   {
     title: "Premium",
-    popular: 1,
-    price: 150000, // harga per bulan
-    description:
-      "Paket lengkap untuk toko retail dengan fitur manajemen produk dan stok.",
+    popular: 0,
+    price: "3.500.000",
+    description: "Kontrol penuh untuk bisnis yang terus tumbuh.",
     buttonText: "Langganan Premium",
     benefitList: [
-      "Hingga 5 pengguna",
-      "Transaksi tak terbatas",
-      "Manajemen stok & produk",
-      "Laporan penjualan lanjutan",
+      "Unlimited User",
+      "Full service outlet",
+      "Manajemen stok",
+      "Akses laporan real-time",
       "Dukungan prioritas",
-    ],
-  },
-  {
-    title: "Enterprise",
-    popular: 0,
-    price: 450000,
-    description: "Solusi POS untuk bisnis skala besar dengan banyak cabang.",
-    buttonText: "Hubungi Kami",
-    benefitList: [
-      "Pengguna tak terbatas",
-      "Multi cabang & gudang",
-      "Integrasi hardware kasir",
-      "Laporan keuangan detail",
-      "Dukungan via telepon & email",
+      "1 Printer, 1 Scanner & 1 Laci Uang",
+      "Software & update 1 tahun",
     ],
   },
 ];
@@ -126,12 +131,19 @@ const plans: PlanProps[] = [
         </CardContent>
 
         <CardFooter>
-          <Button
-            :variant="popular === PopularPlan?.NO ? 'secondary' : 'default'"
-            class="w-full"
+          <a
+            href="https://wa.me/6282227779880"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex items-center justify-center w-full"
           >
-            {{ buttonText }}
-          </Button>
+            <Button
+              :variant="popular === PopularPlan?.NO ? 'secondary' : 'default'"
+              class="w-full"
+            >
+              {{ buttonText }}
+            </Button>
+          </a>
         </CardFooter>
       </Card>
     </div>
