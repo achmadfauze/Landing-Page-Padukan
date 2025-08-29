@@ -46,59 +46,60 @@ const handleSubmit = () => {
 </script>
 
 <template>
-  <section
-    id="contact"
-    class="container py-24 sm:py-32"
-  >
+  <section id="contact" class="container py-24 sm:py-32">
     <section class="grid grid-cols-1 md:grid-cols-2 gap-8">
       <div>
         <div class="mb-4">
-          <h2 class="text-lg text-primary mb-2 tracking-wider">Contact</h2>
+          <h2 class="text-lg text-blue-800 mb-2 tracking-wider">Contact</h2>
 
-          <h2 class="text-3xl md:text-4xl font-bold">Connect With Us</h2>
+          <h2 class="text-3xl md:text-4xl font-bold">Terhubung Dengan Kami</h2>
         </div>
         <p class="mb-8 text-muted-foreground lg:w-5/6">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum
-          ipsam sint enim exercitationem ex autem corrupti quas tenetur
+          Kami siap membantu menjawab pertanyaan Anda seputar produk maupun
+          layanan kami. Jangan ragu untuk menghubungi kami melalui formulir,
+          email, atau media sosial yang tersedia.
         </p>
 
         <div class="flex flex-col gap-4">
           <div>
             <div class="flex gap-2 mb-1">
               <Building2 />
-              <div class="font-bold">Find Us</div>
+              <div class="font-bold">Alamat</div>
             </div>
 
-            <div>742 Evergreen Terrace, Springfield, IL 62704</div>
+            <div>
+              Perumahan arum Lestari permai3 blok c21, fajar baru, jati
+              agung,lampung selatan
+            </div>
           </div>
 
           <div>
             <div class="flex gap-2 mb-1">
               <Phone />
-              <div class="font-bold">Call Us</div>
+              <div class="font-bold">Nomor Telepon</div>
             </div>
 
-            <div>+1 (619) 123-4567</div>
+            <div>0822 2777 9880</div>
           </div>
 
           <div>
             <div class="flex gap-2 mb-1">
               <Mail />
-              <div class="font-bold">Mail Us</div>
+              <div class="font-bold">Email</div>
             </div>
 
-            <div>leomirandadev@gmail.com</div>
+            <div>info@digitalkreativa.com</div>
           </div>
 
           <div>
             <div class="flex gap-2">
               <Clock />
-              <div class="font-bold">Visit Us</div>
+              <div class="font-bold">Kunjungi Kami</div>
             </div>
 
             <div>
-              <div>Monday - Friday</div>
-              <div>8AM - 4PM</div>
+              <div>Senin - Jum'at</div>
+              <div>8:00 - 17:00 WIB</div>
             </div>
           </div>
         </div>
@@ -108,10 +109,7 @@ const handleSubmit = () => {
       <Card class="bg-muted/60 dark:bg-card">
         <CardHeader class="text-primary text-2xl"> </CardHeader>
         <CardContent>
-          <form
-            @submit.prevent="handleSubmit"
-            class="grid gap-4"
-          >
+          <form @submit.prevent="handleSubmit" class="grid gap-4">
             <div class="flex flex-col md:flex-row gap-8">
               <div class="flex flex-col w-full gap-1.5">
                 <Label for="first-name">First Name</Label>
@@ -179,10 +177,7 @@ const handleSubmit = () => {
               />
             </div>
 
-            <Alert
-              v-if="invalidInputForm"
-              variant="destructive"
-            >
+            <Alert v-if="invalidInputForm" variant="destructive">
               <AlertCircle class="w-4 h-4" />
               <AlertTitle>Error</AlertTitle>
               <AlertDescription>
@@ -190,7 +185,9 @@ const handleSubmit = () => {
               </AlertDescription>
             </Alert>
 
-            <Button class="mt-4">Send message</Button>
+            <Button class="mt-4 bg-blue-800 hover:bg-blue-900"
+              >Send message</Button
+            >
           </form>
         </CardContent>
 

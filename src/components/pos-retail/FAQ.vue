@@ -14,33 +14,33 @@ interface FAQProps {
 
 const FAQList: FAQProps[] = [
   {
-    question: "Apa layanan utama yang ditawarkan perusahaan ini?",
+    question: "Apa itu sistem POS Retail ini?",
     answer:
-      "Kami membantu bisnis berkembang melalui strategi marketing digital, optimasi penjualan, hingga pengelolaan operasional agar lebih efisien.",
+      "POS Retail adalah aplikasi kasir modern yang membantu mencatat penjualan, mengelola stok, dan memantau laporan bisnis secara real-time.",
     value: "item-1",
   },
   {
-    question: "Apakah layanan cocok untuk bisnis kecil maupun besar?",
+    question: "Apakah cocok untuk usaha kecil maupun besar?",
     answer:
-      "Ya, kami mendukung UMKM hingga perusahaan besar dengan solusi yang bisa disesuaikan kebutuhan dan skala bisnis.",
+      "Ya, sistem kami mendukung UMKM seperti warung atau toko kecil hingga bisnis retail besar dengan banyak cabang.",
     value: "item-2",
   },
   {
-    question: "Bagaimana cara memulai menggunakan layanan Anda?",
+    question: "Bagaimana cara memulai menggunakan POS ini?",
     answer:
-      "Cukup hubungi tim kami melalui halaman kontak. Kami akan menjadwalkan sesi konsultasi gratis untuk memahami kebutuhan bisnis Anda.",
+      "Anda bisa mendaftar langsung di website kami dan mencoba paket gratis. Setelah itu, pilih paket berbayar sesuai kebutuhan toko Anda.",
     value: "item-3",
   },
   {
-    question: "Apakah saya akan mendapat laporan hasil kerja secara berkala?",
+    question: "Apakah saya bisa melihat laporan penjualan?",
     answer:
-      "Tentu. Kami menyediakan laporan performa marketing, penjualan, dan strategi yang transparan agar Anda bisa memantau perkembangan bisnis.",
+      "Tentu. Sistem menyediakan laporan harian, mingguan, dan bulanan yang bisa diunduh untuk memantau perkembangan bisnis.",
     value: "item-4",
   },
   {
-    question: "Berapa lama biasanya hasil dapat terlihat?",
+    question: "Apakah bisa digunakan di lebih dari satu perangkat?",
     answer:
-      "Tergantung jenis layanan. Untuk campaign marketing digital biasanya 2–4 minggu, sedangkan strategi operasional bisa memakan waktu lebih panjang.",
+      "Bisa. Anda dapat menggunakan POS ini di beberapa perangkat sekaligus, misalnya kasir utama dan perangkat mobile untuk pemilik toko.",
     value: "item-5",
   },
 ];
@@ -71,7 +71,7 @@ const FAQList: FAQProps[] = [
     <h3 class="font-medium mt-4">
       Masih punya pertanyaan?
       <a href="#" class="text-muted-foreground">
-        <a href="#" class="underline">Hubungi kami</a>
+        <RouterLink to="/contact" class="underline">Hubungi kami</RouterLink>
       </a>
     </h3>
   </section>

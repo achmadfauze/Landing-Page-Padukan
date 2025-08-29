@@ -14,33 +14,33 @@ interface FAQProps {
 
 const FAQList: FAQProps[] = [
   {
-    question: "Apa layanan utama yang ditawarkan perusahaan ini?",
+    question: "Apa itu Blast Sonic?",
     answer:
-      "Kami membantu bisnis berkembang melalui strategi marketing digital, optimasi penjualan, hingga pengelolaan operasional agar lebih efisien.",
+      "Blast Sonic adalah aplikasi broadcast WhatsApp yang membantu Anda mengirim pesan massal ke banyak kontak secara cepat dan efisien.",
     value: "item-1",
   },
   {
-    question: "Apakah layanan cocok untuk bisnis kecil maupun besar?",
+    question: "Apakah cocok untuk bisnis kecil maupun besar?",
     answer:
-      "Ya, kami mendukung UMKM hingga perusahaan besar dengan solusi yang bisa disesuaikan kebutuhan dan skala bisnis.",
+      "Ya, Blast Sonic bisa digunakan oleh UMKM, toko online, hingga perusahaan besar untuk mendukung promosi, informasi pelanggan, dan campaign marketing.",
     value: "item-2",
   },
   {
-    question: "Bagaimana cara memulai menggunakan layanan Anda?",
+    question: "Bagaimana cara memulai menggunakan Blast Sonic?",
     answer:
-      "Cukup hubungi tim kami melalui halaman kontak. Kami akan menjadwalkan sesi konsultasi gratis untuk memahami kebutuhan bisnis Anda.",
+      "Cukup daftar akun di website kami, login ke aplikasi, lalu Anda bisa langsung mengimpor kontak dan mulai mengirim pesan broadcast.",
     value: "item-3",
   },
   {
-    question: "Apakah saya akan mendapat laporan hasil kerja secara berkala?",
+    question: "Apakah saya bisa menjadwalkan pesan?",
     answer:
-      "Tentu. Kami menyediakan laporan performa marketing, penjualan, dan strategi yang transparan agar Anda bisa memantau perkembangan bisnis.",
+      "Ya, Blast Sonic mendukung fitur penjadwalan pesan sehingga Anda bisa mengatur kapan pesan akan dikirim sesuai kebutuhan campaign.",
     value: "item-4",
   },
   {
-    question: "Berapa lama biasanya hasil dapat terlihat?",
+    question: "Apakah aman digunakan?",
     answer:
-      "Tergantung jenis layanan. Untuk campaign marketing digital biasanya 2–4 minggu, sedangkan strategi operasional bisa memakan waktu lebih panjang.",
+      "Tentu. Blast Sonic dibangun dengan sistem keamanan yang menjaga data kontak dan pesan Anda tetap terlindungi.",
     value: "item-5",
   },
 ];
@@ -71,7 +71,7 @@ const FAQList: FAQProps[] = [
     <h3 class="font-medium mt-4">
       Masih punya pertanyaan?
       <a href="#" class="text-muted-foreground">
-        <a href="#" class="underline">Hubungi kami</a>
+        <RouterLink to="/contact" class="underline">Hubungi kami</RouterLink>
       </a>
     </h3>
   </section>

@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<!-- <script setup lang="ts">
 import Navbar from "./components/Navbar.vue";
 import Hero from "./components/Hero.vue";
 import Benefits from "./components/Benefits.vue";
@@ -24,10 +24,21 @@ import Footer from "./components/Footer.vue";
   <Services />
   <HowItWorks />
   <Testimonials />
-  <Team />
+  <div class="bg-gray-100 w-full">
+    <Team />
+  </div>
   <Community />
   <Pricing />
   <Contact />
   <FAQ />
   <Footer />
+</template> -->
+
+<script setup lang="ts">
+import Navbar from "./components/Navbar.vue";
+</script>
+
+<template>
+  <Navbar />
+  <RouterView />
 </template>

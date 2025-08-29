@@ -14,33 +14,33 @@ interface FAQProps {
 
 const FAQList: FAQProps[] = [
   {
-    question: "Apa layanan utama yang ditawarkan perusahaan ini?",
+    question: "Apa itu layanan periklanan digital ini?",
     answer:
-      "Kami membantu bisnis berkembang melalui strategi marketing digital, optimasi penjualan, hingga pengelolaan operasional agar lebih efisien.",
+      "Layanan periklanan digital kami membantu bisnis mempromosikan produk atau jasa secara online melalui berbagai platform seperti Google, Instagram, dan Facebook Ads.",
     value: "item-1",
   },
   {
-    question: "Apakah layanan cocok untuk bisnis kecil maupun besar?",
+    question: "Apakah layanan ini cocok untuk bisnis kecil maupun besar?",
     answer:
-      "Ya, kami mendukung UMKM hingga perusahaan besar dengan solusi yang bisa disesuaikan kebutuhan dan skala bisnis.",
+      "Ya, layanan kami dirancang untuk mendukung UMKM yang baru mulai beriklan, hingga perusahaan besar yang membutuhkan strategi pemasaran digital yang kompleks.",
     value: "item-2",
   },
   {
-    question: "Bagaimana cara memulai menggunakan layanan Anda?",
+    question: "Bagaimana cara memulai menggunakan layanan ini?",
     answer:
-      "Cukup hubungi tim kami melalui halaman kontak. Kami akan menjadwalkan sesi konsultasi gratis untuk memahami kebutuhan bisnis Anda.",
+      "Anda dapat mendaftar di website kami dan memilih paket Basic atau Premium sesuai kebutuhan. Setelah itu, Anda bisa langsung membuat dan mengelola kampanye iklan.",
     value: "item-3",
   },
   {
-    question: "Apakah saya akan mendapat laporan hasil kerja secara berkala?",
+    question: "Apakah saya bisa melihat laporan performa iklan?",
     answer:
-      "Tentu. Kami menyediakan laporan performa marketing, penjualan, dan strategi yang transparan agar Anda bisa memantau perkembangan bisnis.",
+      "Tentu. Sistem kami menyediakan laporan performa kampanye secara harian, mingguan, dan bulanan, lengkap dengan metrik seperti jangkauan, klik, dan konversi.",
     value: "item-4",
   },
   {
-    question: "Berapa lama biasanya hasil dapat terlihat?",
+    question: "Apakah layanan ini bisa digunakan oleh tim atau agensi?",
     answer:
-      "Tergantung jenis layanan. Untuk campaign marketing digital biasanya 2–4 minggu, sedangkan strategi operasional bisa memakan waktu lebih panjang.",
+      "Bisa. Paket Premium dan Enterprise memungkinkan akses multi pengguna, cocok untuk tim internal maupun agensi pemasaran digital.",
     value: "item-5",
   },
 ];
@@ -71,7 +71,8 @@ const FAQList: FAQProps[] = [
     <h3 class="font-medium mt-4">
       Masih punya pertanyaan?
       <a href="#" class="text-muted-foreground">
-        <a href="#" class="underline">Hubungi kami</a>
+        <RouterLink to="/contact" class="underline">Hubungi kami</RouterLink>
+        <!-- <a href="#" class="underline">Hubungi kami</a> -->
       </a>
     </h3>
   </section>

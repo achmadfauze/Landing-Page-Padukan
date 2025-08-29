@@ -2,8 +2,9 @@
 import { ref } from "vue";
 
 import { useColorMode } from "@vueuse/core";
-const mode = useColorMode();
-mode.value = "dark";
+const mode = useColorMode({
+  initialValue: "dark", // default dark
+});
 
 import {
   NavigationMenu,
@@ -28,6 +29,7 @@ import { Separator } from "@/components/ui/separator";
 import { ChevronsDown, Menu } from "lucide-vue-next";
 import GithubIcon from "@/icons/GithubIcon.vue";
 import ToggleTheme from "./ToggleTheme.vue";
+import { RouterLink } from "vue-router";
 
 interface RouteProps {
   href: string;
@@ -37,41 +39,43 @@ interface RouteProps {
 interface FeatureProps {
   title: string;
   description: string;
+  href: string;
 }
 
 const routeList: RouteProps[] = [
+  { href: "/team", label: "Tentang Kami" },
+  { href: "/contact", label: "Hubungi Kami" },
+];
+
+const product: FeatureProps[] = [
   {
-    href: "#testimonials",
-    label: "Testimonials",
+    title: "Padukan Pos Retail",
+    description: "💳 Kelola penjualan & stok toko dengan mudah.",
+    href: "/posretail",
   },
   {
-    href: "#team",
-    label: "Team",
-  },
-  {
-    href: "#contact",
-    label: "Contact",
-  },
-  {
-    href: "#faq",
-    label: "FAQ",
+    title: "Padukan Blast Sonic",
+    description: "📢 Kirim pesan WhatsApp massal lebih cepat.",
+    href: "/wablast",
   },
 ];
 
-const featureList: FeatureProps[] = [
+const services: FeatureProps[] = [
   {
-    title: "Showcase Your Value ",
-    description: "Highlight how your product solves user problems.",
+    title: "Periklanan Digital",
+    description:
+      "Strategi Pemasaran online untuk meningkatkan brand awareness.",
+    href: "/iklan-digital",
   },
   {
-    title: "Build Trust",
-    description:
-      "Leverages social proof elements to establish trust and credibility.",
+    title: "Konten Kreatif",
+    description: "Produksi foto, video, desain grafis dan copywriting.",
+    href: "/konten-kreatif",
   },
   {
-    title: "Capture Leads",
-    description:
-      "Make your lead capture form visually appealing and strategically.",
+    title: "Konsultasi Media",
+    description: "Solusi strategis untuk pengelolaan media perusahaan.",
+    href: "/konsultasi-media",
   },
 ];
 
@@ -83,26 +87,31 @@ const isOpen = ref<boolean>(false);
     :class="{
       'shadow-light': mode === 'light',
       'shadow-dark': mode === 'dark',
-      'w-[90%] md:w-[70%] lg:w-[75%] lg:max-w-screen-xl top-5 mx-auto sticky border z-40 rounded-2xl flex justify-between items-center p-2 bg-card shadow-md': true,
+      'w-[90%] md:w-[70%] lg:w-[75%] lg:max-w-screen-xl top-5 mx-auto sticky border z-40 rounded-2xl flex justify-between items-center p-2 px-4 bg-card shadow-md': true,
     }"
   >
-    <a
-      href="/"
-      class="font-bold text-lg flex items-center"
-    >
-      <ChevronsDown
-        class="bg-gradient-to-tr from-primary via-primary/70 to-primary rounded-lg w-9 h-9 mr-2 border text-white"
+    <RouterLink to="/" class="flex items-center">
+      <!-- Logo Light -->
+      <img
+        v-if="mode === 'light'"
+        src="@/assets/logo-dark.png"
+        alt="Logo Light"
+        class="h-6 w-auto mr-2"
       />
-      ShadcnVue</a
-    >
+
+      <img
+        v-else
+        src="@/assets/logo-light.png"
+        alt="Logo Dark"
+        class="h-6 w-auto mr-2"
+      />
+    </RouterLink>
+
     <!-- Mobile -->
-    <div class="flex items-center lg:hidden">
+    <div class="flex items-center lg:!hidden">
       <Sheet v-model:open="isOpen">
         <SheetTrigger as-child>
-          <Menu
-            @click="isOpen = true"
-            class="cursor-pointer"
-          />
+          <Menu @click="isOpen = true" class="cursor-pointer" />
         </SheetTrigger>
 
         <SheetContent
@@ -112,15 +121,22 @@ const isOpen = ref<boolean>(false);
           <div>
             <SheetHeader class="mb-4 ml-4">
               <SheetTitle class="flex items-center">
-                <a
-                  href="/"
-                  class="flex items-center"
-                >
-                  <ChevronsDown
-                    class="bg-gradient-to-tr from-primary/70 via-primary to-primary/70 rounded-lg size-9 mr-2 border text-white"
+                <RouterLink to="/" class="flex items-center">
+                  <!-- Logo Light -->
+                  <img
+                    v-if="mode === 'light'"
+                    src="@/assets/logo-dark.png"
+                    alt="Logo Light"
+                    class="h-6 w-auto mr-2"
                   />
-                  ShadcnVue
-                </a>
+
+                  <img
+                    v-else
+                    src="@/assets/logo-light.png"
+                    alt="Logo Dark"
+                    class="h-6 w-auto mr-2"
+                  />
+                </RouterLink>
               </SheetTitle>
             </SheetHeader>
 
@@ -132,12 +148,9 @@ const isOpen = ref<boolean>(false);
                 variant="ghost"
                 class="justify-start text-base"
               >
-                <a
-                  @click="isOpen = false"
-                  :href="href"
-                >
+                <RouterLink @click="isOpen = false" :to="href">
                   {{ label }}
-                </a>
+                </RouterLink>
               </Button>
             </div>
           </div>
@@ -156,28 +169,45 @@ const isOpen = ref<boolean>(false);
       <NavigationMenuList>
         <NavigationMenuItem>
           <NavigationMenuTrigger class="bg-card text-base">
-            Features
+            Produk & Layanan
           </NavigationMenuTrigger>
           <NavigationMenuContent>
-            <div class="grid w-[600px] grid-cols-2 gap-5 p-4">
-              <img
-                src="https://www.radix-vue.com/logo.svg"
-                alt="Beach"
-                class="h-full w-full rounded-md object-cover"
-              />
+            <div class="w-[700px] grid grid-cols-2 gap-5 p-4">
               <ul class="flex flex-col gap-2">
-                <li
-                  v-for="{ title, description } in featureList"
+                <RouterLink
+                  v-for="{ title, description, href } in product"
                   :key="title"
-                  class="rounded-md p-3 text-sm hover:bg-muted"
+                  :to="href"
                 >
-                  <p class="mb-1 font-semibold leading-none text-foreground">
-                    {{ title }}
-                  </p>
-                  <p class="line-clamp-2 text-muted-foreground">
-                    {{ description }}
-                  </p>
-                </li>
+                  <li
+                    class="rounded-md p-3 text-sm hover:bg-muted cursor-pointer"
+                  >
+                    <p class="mb-1 font-semibold leading-none text-foreground">
+                      {{ title }}
+                    </p>
+                    <p class="line-clamp-2 text-muted-foreground">
+                      {{ description }}
+                    </p>
+                  </li>
+                </RouterLink>
+              </ul>
+              <ul class="flex flex-col gap-2">
+                <RouterLink
+                  v-for="{ title, description, href } in services"
+                  :key="title"
+                  :to="href"
+                >
+                  <li
+                    class="rounded-md p-3 text-sm hover:bg-muted cursor-pointer"
+                  >
+                    <p class="mb-1 font-semibold leading-none text-foreground">
+                      {{ title }}
+                    </p>
+                    <p class="line-clamp-2 text-muted-foreground">
+                      {{ description }}
+                    </p>
+                  </li>
+                </RouterLink>
               </ul>
             </div>
           </NavigationMenuContent>
@@ -192,9 +222,9 @@ const isOpen = ref<boolean>(false);
               variant="ghost"
               class="justify-start text-base"
             >
-              <a :href="href">
+              <RouterLink @click="isOpen = false" :to="href">
                 {{ label }}
-              </a>
+              </RouterLink>
             </Button>
           </NavigationMenuLink>
         </NavigationMenuItem>
@@ -204,20 +234,23 @@ const isOpen = ref<boolean>(false);
     <div class="hidden lg:flex">
       <ToggleTheme />
 
-      <Button
-        as-child
-        size="sm"
-        variant="ghost"
-        aria-label="View on GitHub"
-      >
-        <a
-          aria-label="View on GitHub"
-          href="https://github.com/leoMirandaa/shadcn-vue-landing-page.git"
-          target="_blank"
-        >
-          <GithubIcon class="size-5" />
+      <!-- <Button as-child size="sm" variant="ghost">
+        <a href="#" target="_blank">
+          <img
+            v-if="mode === 'light'"
+            src="@/assets/whatsapp.png"
+            alt="Logo Light"
+            class="h-8 w-auto"
+          />
+
+          <img
+            v-else
+            src="@/assets/whatsapp-light.png"
+            alt="Logo Dark"
+            class="h-8 w-auto"
+          />
         </a>
-      </Button>
+      </Button> -->
     </div>
   </header>
 </template>

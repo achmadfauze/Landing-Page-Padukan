@@ -181,15 +181,75 @@ const socialIcon = (socialName: string) => {
 </script>
 
 <template>
-  <section
-    id="team"
-    class="container lg:w-[75%] py-24 sm:py-32"
-  >
+  <section id="about" class="container lg:w-[75%] py-24 sm:py-32">
+    <div class="text-center mb-12">
+      <h2 class="text-lg text-blue-800 mb-2 tracking-wider">PERUSAHAAN</h2>
+      <h2 class="text-3xl md:text-4xl font-bold mb-6">Tentang Kami</h2>
+      <p class="text-muted-foreground md:w-3/4 mx-auto leading-relaxed">
+        PT Digital Kreativa Nusantara, didirikan pada tahun 2024 dan berbasis di
+        Lampung, berfokus pada periklanan digital, konten kreatif, konsultasi
+        media, serta pengembangan aplikasi e-commerce. Perusahaan ini
+        berkomitmen untuk memberikan solusi inovatif berbasis teknologi,
+        mendukung transformasi bisnis klien dalam menghadapi tantangan era
+        digital.
+      </p>
+    </div>
+
+    <div class="mt-12 grid md:grid-cols-2 gap-12 text-left">
+      <!-- Visi -->
+      <div>
+        <h3 class="text-xl font-semibold text-blue-800 mb-4 text-center">
+          Visi
+        </h3>
+        <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+          Menjadi perusahaan terdepan dalam solusi digital yang kreatif dan
+          berbasis budaya Nusantara.
+        </p>
+        <ul
+          class="list-disc list-inside space-y-2 text-gray-700 dark:text-gray-300"
+        >
+          <li>
+            Menjadi perusahaan terkemuka dalam menyediakan solusi digital yang
+            inovatif dan berdaya saing tinggi di era teknologi.
+          </li>
+          <li>
+            Mengintegrasikan kreativitas dan nilai budaya Nusantara dalam setiap
+            solusi digital yang dihadirkan.
+          </li>
+        </ul>
+      </div>
+
+      <!-- Misi -->
+      <div>
+        <h3 class="text-xl font-semibold text-blue-800 mb-4 text-center">
+          Misi
+        </h3>
+        <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+          Mendorong transformasi digital dengan inovasi berkualitas tinggi,
+          menghormati nilai budaya Nusantara, membantu perkembangan bisnis, dan
+          menciptakan manfaat luas melalui teknologi.
+        </p>
+        <ul
+          class="list-disc list-inside space-y-2 text-gray-700 dark:text-gray-300"
+        >
+          <li>
+            Menyediakan layanan digital yang inovatif dan menghormati budaya
+            Nusantara.
+          </li>
+          <li>
+            Mendukung pertumbuhan bisnis dengan pendekatan kreatif dan
+            profesional.
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <section id="team" class="container lg:w-[75%]">
     <div class="text-center mb-8">
-      <h2 class="text-lg text-primary text-center mb-2 tracking-wider">Team</h2>
+      <h2 class="text-lg text-blue-800 text-center mb-2 tracking-wider">Tim</h2>
 
       <h2 class="text-3xl md:text-4xl text-center font-bold">
-        The Company Dream Team
+        Tim Impian Perusahaan
       </h2>
     </div>
 
@@ -217,7 +277,7 @@ const socialIcon = (socialName: string) => {
           </div>
           <CardTitle class="py-6 pb-4 px-6"
             >{{ firstName }}
-            <span class="text-primary">{{ lastName }}</span>
+            <span class="text-blue-800">{{ lastName }}</span>
           </CardTitle>
         </CardHeader>
 

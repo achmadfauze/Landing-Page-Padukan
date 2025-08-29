@@ -27,48 +27,47 @@ interface PlanProps {
 
 const plans: PlanProps[] = [
   {
-    title: "Free",
+    title: "Basic",
     popular: 0,
-    price: 0,
+    price: 150000,
     description:
-      "Lorem ipsum dolor sit, amet ipsum consectetur adipisicing elit.",
-    buttonText: "Start Free Trial",
+      "Paket entry-level untuk bisnis yang mulai membangun identitas visual dan konten online.",
+    buttonText: "Langganan Basic",
     benefitList: [
-      "1 team member",
-      "1 GB storage",
-      "Upto 2 pages",
-      "Community support",
-      "AI assistance",
+      "3 desain grafis per bulan",
+      "1 sesi foto produk (maks. 5 foto)",
+      "Copywriting untuk sosial media (maks. 3 caption)",
+      "1 kali revisi konten",
     ],
   },
   {
     title: "Premium",
     popular: 1,
-    price: 45,
+    price: 300000,
     description:
-      "Lorem ipsum dolor sit, amet ipsum consectetur adipisicing elit.",
-    buttonText: "Get starterd",
+      "Paket ideal untuk bisnis yang ingin tampil konsisten dan profesional di berbagai platform.",
+    buttonText: "Langganan Premium",
     benefitList: [
-      "4 team member",
-      "8 GB storage",
-      "Upto 6 pages",
-      "Priority support",
-      "AI assistance",
+      "8 desain grafis per bulan",
+      "2 sesi foto atau video pendek",
+      "Copywriting untuk sosial media & promosi (hingga 10 caption)",
+      "Revisi hingga 3 kali",
+      "Konsultasi kreatif bulanan",
     ],
   },
   {
     title: "Enterprise",
     popular: 0,
-    price: 120,
+    price: 600000,
     description:
-      "Lorem ipsum dolor sit, amet ipsum consectetur adipisicing elit.",
-    buttonText: "Contact US",
+      "Paket komprehensif untuk brand besar atau agensi dengan kebutuhan konten yang intensif dan beragam.",
+    buttonText: "Hubungi Kami",
     benefitList: [
-      "10 team member",
-      "20 GB storage",
-      "Upto 10 pages",
-      "Phone & email support",
-      "AI assistance",
+      "Produksi konten custom tanpa batas (desain, foto, video)*",
+      "Strategi konten & branding menyeluruh",
+      "Tim kreatif khusus untuk proyek Anda",
+      "Revisi tanpa batas selama kerja sama",
+      "Meeting & support via video call atau on-site*",
     ],
   },
 ];
@@ -76,18 +75,17 @@ const plans: PlanProps[] = [
 
 <template>
   <section class="container py-24 sm:py-32">
-    <h2 class="text-lg text-primary text-center mb-2 tracking-wider">
-      Pricing
-    </h2>
+    <h2 class="text-lg text-blue-800 text-center mb-2 tracking-wider">Harga</h2>
 
     <h2 class="text-3xl md:text-4xl text-center font-bold mb-4">
-      Get unlimitted access
+      Akses tanpa batas
     </h2>
 
     <h3
       class="md:w-1/2 mx-auto text-xl text-center text-muted-foreground pb-14"
     >
-      Lorem ipsum dolor sit amet consectetur adipisicing reiciendis.
+      Pilih paket terbaik untuk mendukung usaha retail Anda, mulai dari fitur
+      kasir sederhana hingga manajemen cabang lengkap.
     </h3>
 
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-4">
@@ -102,7 +100,7 @@ const plans: PlanProps[] = [
         } in plans"
         :key="title"
         :class="{
-          'drop-shadow-xl shadow-black/10 dark:shadow-white/10 border-[1.5px] border-primary lg:scale-[1.1]':
+          'drop-shadow-xl shadow-black/10 dark:shadow-white/10 border-[1.5px] border-blue-800 lg:scale-[1.1]':
             popular === PopularPlan?.YES,
         }"
       >
@@ -114,19 +112,15 @@ const plans: PlanProps[] = [
           <CardDescription class="pb-4">{{ description }}</CardDescription>
 
           <div>
-            <span class="text-3xl font-bold">${{ price }}</span>
-            <span class="text-muted-foreground"> /month</span>
+            <span class="text-3xl font-bold">Rp. {{ price }}</span>
+            <span class="text-muted-foreground"> /bulan</span>
           </div>
         </CardHeader>
 
         <CardContent class="flex">
           <div class="space-y-4">
-            <span
-              v-for="benefit in benefitList"
-              :key="benefit"
-              class="flex"
-            >
-              <Check class="text-primary mr-2" />
+            <span v-for="benefit in benefitList" :key="benefit" class="flex">
+              <Check class="text-blue-800 mr-2" />
               <h3>{{ benefit }}</h3>
             </span>
           </div>
