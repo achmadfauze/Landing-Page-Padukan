@@ -1,25 +1,7 @@
 <script setup lang="ts">
-import {
-  Card,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-vue-next";
-
-import { Badge } from "@/components/ui/badge";
-
-enum ProService {
-  YES = 1,
-  NO = 0,
-}
-
-interface ServiceProps {
-  title: string;
-  pro: ProService;
-  description: string;
-}
 
 const featureList = [
   {
