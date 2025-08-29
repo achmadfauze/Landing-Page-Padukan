@@ -19,7 +19,7 @@ enum PopularPlan {
 interface PlanProps {
   title: string;
   popular: PopularPlan;
-  price: number;
+  price: string;
   description: string;
   buttonText: string;
   benefitList: string[];
@@ -27,28 +27,29 @@ interface PlanProps {
 
 const plans: PlanProps[] = [
   {
-    title: "Gratis",
+    title: "Standart",
     popular: 0,
-    price: 0,
+    price: "200.000",
     description:
       "Cocok untuk percobaan awal mengirim pesan broadcast WhatsApp.",
-    buttonText: "Coba Gratis",
+    buttonText: "Langganan Standart",
     benefitList: [
-      "1 akun WhatsApp",
-      "Maksimal 200 pesan/bulan",
-      "Template pesan dasar",
-      "Dukungan komunitas",
+      "3 akun WhatsApp",
+      "Pesan tak terbatas",
+      "Fitur penjadwalan pesan",
+      "Statistik & laporan campaign",
+      "Dukungan prioritas",
     ],
   },
   {
     title: "Premium",
     popular: 1,
-    price: 150000, // harga per bulan
+    price: "250.000", // harga per bulan
     description:
       "Paket populer untuk bisnis yang aktif melakukan promosi via WhatsApp.",
     buttonText: "Langganan Premium",
     benefitList: [
-      "Hingga 3 akun WhatsApp",
+      "5 akun WhatsApp",
       "Pesan tak terbatas",
       "Fitur penjadwalan pesan",
       "Statistik & laporan campaign",
@@ -58,16 +59,16 @@ const plans: PlanProps[] = [
   {
     title: "Enterprise",
     popular: 0,
-    price: 450000,
+    price: "300.000",
     description:
       "Solusi WhatsApp blast untuk perusahaan besar dengan kebutuhan skala tinggi.",
     buttonText: "Hubungi Kami",
     benefitList: [
-      "Akun WhatsApp tak terbatas",
-      "Multi user & tim",
-      "Integrasi API & CRM",
-      "Laporan detail & analitik",
-      "Dukungan via telepon & email",
+      "7 akun WhatsApp",
+      "Pesan tak terbatas",
+      "Fitur penjadwalan pesan",
+      "Statistik & laporan campaign",
+      "Dukungan prioritas",
     ],
   },
 ];
@@ -127,12 +128,19 @@ const plans: PlanProps[] = [
         </CardContent>
 
         <CardFooter>
-          <Button
-            :variant="popular === PopularPlan?.NO ? 'secondary' : 'default'"
-            class="w-full"
+          <a
+            href="https://wa.me/6282227779880"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex items-center justify-center w-full"
           >
-            {{ buttonText }}
-          </Button>
+            <Button
+              :variant="popular === PopularPlan?.NO ? 'secondary' : 'default'"
+              class="w-full"
+            >
+              {{ buttonText }}
+            </Button>
+          </a>
         </CardFooter>
       </Card>
     </div>
