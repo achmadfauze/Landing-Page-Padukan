@@ -1,5 +1,4 @@
 <script setup lang="ts">
-
 import {
   Card,
   CardContent,
@@ -79,13 +78,15 @@ const reviewList: ReviewProps[] = [
 </script>
 
 <template>
-  <section id="testimonials" class="container py-12">
+  <section id="testimonials" class="container py-24 mb-10">
     <div class="text-center mb-8">
-      <h2 class="text-lg text-blue-800 text-center mb-2 tracking-wider">
+      <h2
+        class="text-lg text-blue-800 text-center dark:text-white mb-2 tracking-wider"
+      >
         Testimoni
       </h2>
 
-      <h2 class="text-3xl md:text-4xl text-center font-bold mb-4">
+      <h2 class="text-2xl md:text-4xl text-center font-bold mb-4">
         Dengarkan Apa yang Dikatakan oleh 100+ Klien Kami
       </h2>
     </div>
@@ -102,7 +103,7 @@ const reviewList: ReviewProps[] = [
           :key="review.name"
           class="md:basis-1/2 lg:basis-1/3"
         >
-          <Card class="bg-muted/50 dark:bg-card">
+          <Card class="bg-white dark:bg-black/50">
             <CardContent class="pt-6 pb-0">
               <div class="flex gap-1 pb-6">
                 <Star class="size-4 fill-blue-800 text-blue-800" />

@@ -46,15 +46,15 @@ const handleSubmit = () => {
 </script>
 
 <template>
-  <section id="contact" class="container py-24 sm:py-32">
+  <section id="contact" class="container py-12">
     <section class="grid grid-cols-1 md:grid-cols-2 gap-8">
       <div>
         <div class="mb-4">
           <h2 class="text-lg text-blue-800 mb-2 tracking-wider">Contact</h2>
 
-          <h2 class="text-3xl md:text-4xl font-bold">Terhubung Dengan Kami</h2>
+          <h2 class="text-2xl md:text-4xl font-bold">Terhubung Dengan Kami</h2>
         </div>
-        <p class="mb-8 text-muted-foreground lg:w-5/6">
+        <p class="mb-8 text-muted-foreground lg:w-5/6 text-justify">
           Kami siap membantu menjawab pertanyaan Anda seputar produk maupun
           layanan kami. Jangan ragu untuk menghubungi kami melalui formulir,
           email, atau media sosial yang tersedia.
@@ -63,7 +63,7 @@ const handleSubmit = () => {
         <div class="flex flex-col gap-4">
           <div>
             <div class="flex gap-2 mb-1">
-              <Building2 />
+              <Building2 :size="20" />
               <div class="font-bold">Alamat</div>
             </div>
 
@@ -75,16 +75,17 @@ const handleSubmit = () => {
 
           <div>
             <div class="flex gap-2 mb-1">
-              <Phone />
+              <Phone :size="20" />
               <div class="font-bold">Nomor Telepon</div>
             </div>
 
             <div>0822 2777 9880</div>
+            <div>0857 8876 0001</div>
           </div>
 
           <div>
-            <div class="flex gap-2 mb-1">
-              <Mail />
+            <div class="flex items-center gap-2 mb-1">
+              <Mail :size="20" />
               <div class="font-bold">Email</div>
             </div>
 
@@ -93,7 +94,7 @@ const handleSubmit = () => {
 
           <div>
             <div class="flex gap-2">
-              <Clock />
+              <Clock :size="20" />
               <div class="font-bold">Kunjungi Kami</div>
             </div>
 

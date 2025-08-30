@@ -27,9 +27,9 @@ interface SocialNetworkProps {
 const teamList: TeamProps[] = [
   {
     imageUrl: "https://i.pravatar.cc/250?img=58",
-    firstName: "Leo",
-    lastName: "Miranda",
-    positions: ["Vue Fronted Developer", "Creator Of This Website"],
+    firstName: "Tommi",
+    lastName: "Sutrisno",
+    positions: ["Chief Executive Officer"],
     socialNetworks: [
       {
         name: "LinkedIn",
@@ -48,9 +48,9 @@ const teamList: TeamProps[] = [
   {
     imageUrl:
       "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1528&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    firstName: "Elizabeth",
-    lastName: "Moore",
-    positions: ["UI/UX Designer"],
+    firstName: "Revi",
+    lastName: "Firandama",
+    positions: ["Business Analyst"],
     socialNetworks: [
       {
         name: "LinkedIn",
@@ -65,9 +65,9 @@ const teamList: TeamProps[] = [
   {
     imageUrl:
       "https://images.unsplash.com/photo-1527980965255-d3b416303d12?q=80&w=1760&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    firstName: "David",
-    lastName: "Diaz",
-    positions: ["Machine Learning Engineer", "TensorFlow Tinkerer"],
+    firstName: "Diki Rahmad",
+    lastName: "Sandi",
+    positions: ["Fullstack Developer"],
     socialNetworks: [
       {
         name: "LinkedIn",
@@ -82,9 +82,9 @@ const teamList: TeamProps[] = [
   {
     imageUrl:
       "https://images.unsplash.com/photo-1573497161161-c3e73707e25c?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    firstName: "Sarah",
-    lastName: "Robinson",
-    positions: ["Cloud Native Developer", " Kubernetes Orchestrator"],
+    firstName: "Achmad",
+    lastName: "Fauzi",
+    positions: ["Web Designer"],
     socialNetworks: [
       {
         name: "LinkedIn",
@@ -103,9 +103,9 @@ const teamList: TeamProps[] = [
   {
     imageUrl:
       "https://images.unsplash.com/photo-1616805765352-beedbad46b2a?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    firstName: "Michael",
-    lastName: "Holland",
-    positions: ["DevOps Engineer", "CI/CD Pipeline Mastermind"],
+    firstName: "Rafi",
+    lastName: "Ajah",
+    positions: ["Video Editor"],
     socialNetworks: [
       {
         name: "LinkedIn",
@@ -116,9 +116,9 @@ const teamList: TeamProps[] = [
   {
     imageUrl:
       "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    firstName: "Zoe",
-    lastName: "Garcia",
-    positions: ["JavaScript Evangelist", "Deno Champion"],
+    firstName: "Hasane",
+    lastName: "Gituloh",
+    positions: ["Digital Marketing Specialist"],
     socialNetworks: [
       {
         name: "LinkedIn",
@@ -130,40 +130,40 @@ const teamList: TeamProps[] = [
       },
     ],
   },
-  {
-    imageUrl:
-      "https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    firstName: "Evan",
-    lastName: "James",
-    positions: ["Backend Developer"],
-    socialNetworks: [
-      {
-        name: "LinkedIn",
-        url: "https://www.linkedin.com/in/leopoldo-miranda/",
-      },
-      {
-        name: "Github",
-        url: "https://github.com/leoMirandaa",
-      },
-      {
-        name: "X",
-        url: "https://x.com/leo_mirand4",
-      },
-    ],
-  },
-  {
-    imageUrl:
-      "https://images.unsplash.com/photo-1573497019236-17f8177b81e8?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3Dhttps://images.unsplash.com/photo-1573497019236-17f8177b81e8?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    firstName: "Pam",
-    lastName: "Taylor",
-    positions: ["Fullstack developer", "UX Researcher"],
-    socialNetworks: [
-      {
-        name: "X",
-        url: "https://x.com/leo_mirand4",
-      },
-    ],
-  },
+  // {
+  //   imageUrl:
+  //     "https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  //   firstName: "Evan",
+  //   lastName: "James",
+  //   positions: ["Backend Developer"],
+  //   socialNetworks: [
+  //     {
+  //       name: "LinkedIn",
+  //       url: "https://www.linkedin.com/in/leopoldo-miranda/",
+  //     },
+  //     {
+  //       name: "Github",
+  //       url: "https://github.com/leoMirandaa",
+  //     },
+  //     {
+  //       name: "X",
+  //       url: "https://x.com/leo_mirand4",
+  //     },
+  //   ],
+  // },
+  // {
+  //   imageUrl:
+  //     "https://images.unsplash.com/photo-1573497019236-17f8177b81e8?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3Dhttps://images.unsplash.com/photo-1573497019236-17f8177b81e8?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  //   firstName: "Pam",
+  //   lastName: "Taylor",
+  //   positions: ["Fullstack developer", "UX Researcher"],
+  //   socialNetworks: [
+  //     {
+  //       name: "X",
+  //       url: "https://x.com/leo_mirand4",
+  //     },
+  //   ],
+  // },
 ];
 
 const socialIcon = (socialName: string) => {
@@ -181,11 +181,11 @@ const socialIcon = (socialName: string) => {
 </script>
 
 <template>
-  <section id="about" class="container lg:w-[75%] py-24 sm:py-32">
+  <section id="about" class="container lg:w-[75%] py-12">
     <div class="text-center mb-12">
-      <h2 class="text-lg text-blue-800 mb-2 tracking-wider">PERUSAHAAN</h2>
-      <h2 class="text-3xl md:text-4xl font-bold mb-6">Tentang Kami</h2>
-      <p class="text-muted-foreground md:w-3/4 mx-auto leading-relaxed">
+      <h2 class="text-lg text-blue-800 mb-2 tracking-wider">Perusahaan</h2>
+      <h2 class="text-2xl md:text-4xl font-bold mb-6">Tentang Kami</h2>
+      <p class="text-muted-foreground mx-auto leading-relaxed text-justify">
         PT Digital Kreativa Nusantara, didirikan pada tahun 2024 dan berbasis di
         Lampung, berfokus pada periklanan digital, konten kreatif, konsultasi
         media, serta pengembangan aplikasi e-commerce. Perusahaan ini
@@ -198,9 +198,7 @@ const socialIcon = (socialName: string) => {
     <div class="mt-12 grid md:grid-cols-2 gap-12 text-left">
       <!-- Visi -->
       <div>
-        <h3 class="text-xl font-semibold text-blue-800 mb-4 text-center">
-          Visi
-        </h3>
+        <h3 class="text-lg text-blue-800 mb-4 text-center">Visi</h3>
         <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
           Menjadi perusahaan terdepan dalam solusi digital yang kreatif dan
           berbasis budaya Nusantara.
@@ -221,9 +219,7 @@ const socialIcon = (socialName: string) => {
 
       <!-- Misi -->
       <div>
-        <h3 class="text-xl font-semibold text-blue-800 mb-4 text-center">
-          Misi
-        </h3>
+        <h3 class="text-lg text-blue-800 mb-4 text-center">Misi</h3>
         <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
           Mendorong transformasi digital dengan inovasi berkualitas tinggi,
           menghormati nilai budaya Nusantara, membantu perkembangan bisnis, dan
@@ -244,11 +240,11 @@ const socialIcon = (socialName: string) => {
       </div>
     </div>
   </section>
-  <section id="team" class="container lg:w-[75%]">
+  <section id="team" class="container lg:w-[75%] pt-12">
     <div class="text-center mb-8">
       <h2 class="text-lg text-blue-800 text-center mb-2 tracking-wider">Tim</h2>
 
-      <h2 class="text-3xl md:text-4xl text-center font-bold">
+      <h2 class="text-2xl md:text-4xl text-center font-bold">
         Tim Impian Perusahaan
       </h2>
     </div>

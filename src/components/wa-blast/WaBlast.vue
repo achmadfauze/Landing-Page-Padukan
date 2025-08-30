@@ -3,57 +3,121 @@ import { useColorMode } from "@vueuse/core";
 const mode = useColorMode();
 
 import { Button } from "@/components/ui/button";
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+} from "@/components/ui/breadcrumb";
 import ImageLight from "@/assets/wa-blast-light.png";
 import ImageDark from "@/assets/wa-blast-dark.png";
+
+import { Check } from "lucide-vue-next";
+import logo from "@/assets/Logo-Sonic.png";
+import whatsappLogo from "@/assets/whatsapp-light.png";
+import productImage from "@/assets/produk&layanan/produk.png";
+
+// Data for the product in one object
+const product = {
+  logo,
+  whatsappLogo,
+  productImage,
+  title: "Sonic Blast",
+  description:
+    "platform WhatsApp Blast yang memungkinkan bisnis mengirimkan pesan promosi, notifikasi, atau pengumuman secara massal dengan mudah dan efisien.",
+  features: [
+    "Kirim pesan massal ke ribuan kontak sekaligus.",
+    "Dukungan template & variabel pesan.",
+    "Dukungan Gambar, File & Tautan Kirim Katalog, Invoice, dll.",
+    "Personalisasi pesan untuk setiap penerima.",
+    "Laporan delivery & status pesan.",
+  ],
+  whatsappLink: "https://wa.me/6282227779880",
+  // productLink: "https://pos-retail.padukan.uacak.com",
+};
 </script>
 
 <template>
-  <section class="container lg:w-[75%] py-24 sm:py-32">
-    <div class="text-center mb-12">
-      <h2 class="text-3xl md:text-4xl font-bold mb-6">Padukan Blast Sonic</h2>
-      <p class="text-muted-foreground md:w-3/4 mx-auto leading-relaxed">
-        Aplikasi Padukan Blast Sonic adalah platform WhatsApp Blast yang
-        memungkinkan bisnis mengirimkan pesan promosi, notifikasi, atau
-        pengumuman secara massal dengan mudah dan efisien. Dirancang untuk
-        mendukung strategi pemasaran digital, aplikasi ini membantu meningkatkan
-        jangkauan komunikasi ke pelanggan dengan cepat tanpa perlu mengirim
-        pesan satu per satu.
-      </p>
-    </div>
-
-    <div class="mt-12 text-center">
-      <!-- Visi -->
-      <div>
-        <h3 class="text-xl font-semibold text-blue-800 mb-4 text-center">
-          Fitur Utama
-        </h3>
-        <ul
-          class="list-disc list-inside space-y-2 text-gray-700 dark:text-gray-300"
-        >
-          <li>Kirim pesan massal ke ribuan kontak sekaligus.</li>
-          <li>Dukungan template & variabel pesan.</li>
-          <li>Dukungan Gambar, File & Tautan Kirim Katalog, Invoice, dll.</li>
-          <li>Personalisasi pesan untuk setiap penerima.</li>
-          <li>Laporan delivery & status pesan.</li>
-        </ul>
+  <section class="container lg:w-[80%] pb-12 pt-5">
+    <Breadcrumb class="mb-10">
+      <BreadcrumbList>
+        <BreadcrumbItem>
+          <BreadcrumbLink>
+            <RouterLink to="/"> Home </RouterLink>
+          </BreadcrumbLink>
+        </BreadcrumbItem>
+        <BreadcrumbSeparator />
+        <BreadcrumbItem>
+          <BreadcrumbLink>
+            <RouterLink to="/produk"> Produk </RouterLink>
+          </BreadcrumbLink>
+        </BreadcrumbItem>
+        <BreadcrumbSeparator />
+        <BreadcrumbItem>
+          <BreadcrumbPage>Pos Retail</BreadcrumbPage>
+        </BreadcrumbItem>
+      </BreadcrumbList>
+    </Breadcrumb>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div class="grid gap-4">
+        <div class="flex items-center gap-4 cursor-pointer">
+          <img :src="product.logo" alt="Logo Dark" class="h-10 w-auto" />
+          <p
+            class="mb-1 leading-none text-foreground hover:text-blue-800 dark:hover:text-primary text-2xl md:text-4xl font-bold"
+          >
+            {{ product.title }}
+          </p>
+        </div>
+        <p class="text-muted-foreground mx-auto leading-snug">
+          {{ product.description }}
+        </p>
+        <div class="grid gap-2">
+          <div
+            v-for="(item, index) in product.features"
+            :key="index"
+            class="flex gap-4 items-center"
+          >
+            <div class="bg-blue-800 rounded-full p-1">
+              <Check :size="14" class="text-white" />
+            </div>
+            <p>{{ item }}</p>
+          </div>
+        </div>
+        <div class="flex gap-4 items-center mt-8">
+          <a
+            :href="product.whatsappLink"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex items-center"
+          >
+            <Button class="font-bold group/arrow bg-blue-800 hover:bg-blue-900">
+              <img
+                :src="product.whatsappLogo"
+                alt="Whatsapp"
+                class="w-8 h-8 mr-2 group-hover/arrow:translate-x-1 transition-transform"
+              />
+              Whatsapp Kami
+            </Button>
+          </a>
+          <!-- <a
+            :href="product.productLink"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex items-center"
+          >
+            <Button variant="secondary"> Kunjungi Aplikasi </Button>
+          </a> -->
+        </div>
       </div>
-      <a
-        href="https://wa.me/6282227779880"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="flex items-center justify-center"
-      >
-        <Button
-          class="w-5/6 md:w-1/4 font-bold group/arrow bg-blue-800 hover:bg-blue-900 mt-12"
-        >
-          <img
-            src="@/assets/whatsapp-light.png"
-            alt="Whatsapp"
-            class="w-8 h-8 mr-2 group-hover/arrow:translate-x-1 transition-transform"
-          />
-          Whatsapp Kami
-        </Button>
-      </a>
+      <div class="w-full justify-start hidden md:block">
+        <img
+          :src="product.productImage"
+          alt="Logo Light"
+          class="h-auto w-auto mr-2"
+        />
+      </div>
     </div>
   </section>
   <section class="container">

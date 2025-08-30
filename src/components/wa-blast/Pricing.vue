@@ -78,12 +78,12 @@ const plans: PlanProps[] = [
   <section class="container py-24 sm:py-32">
     <h2 class="text-lg text-blue-800 text-center mb-2 tracking-wider">Harga</h2>
 
-    <h2 class="text-3xl md:text-4xl text-center font-bold mb-4">
+    <h2 class="text-2xl md:text-4xl text-center font-bold mb-4">
       Akses tanpa batas
     </h2>
 
     <h3
-      class="md:w-1/2 mx-auto text-xl text-center text-muted-foreground pb-14"
+      class="md:w-1/2 mx-auto text-lg md:text-xl text-center text-muted-foreground pb-14"
     >
       Pilih paket terbaik untuk mendukung strategi marketing Anda dengan Blast
       Sonic, mulai dari percobaan gratis hingga solusi enterprise.

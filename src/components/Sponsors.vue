@@ -1,7 +1,13 @@
 <script setup lang="ts">
 import { Marquee } from "@selemondev/vue3-marquee";
 import "@selemondev/vue3-marquee/dist/style.css";
-
+import Ali from "@/assets/sponsor/ali.png";
+import LidahTengku from "@/assets/sponsor/lidah-tengku.png";
+import Benedection from "@/assets/sponsor/benedection.png";
+import Gerai from "@/assets/sponsor/gerai_kita.png";
+import Ayesha from "@/assets/sponsor/ayesha.png";
+import Hatim from "@/assets/sponsor/hatim.png";
+import PLN from "@/assets/sponsor/PLN.png";
 import {
   Crown,
   Vegan,
@@ -19,33 +25,42 @@ interface sponsorsProps {
 
 const sponsors: sponsorsProps[] = [
   {
-    icon: "crown",
-    name: "Acmebrand",
+    icon: LidahTengku,
+    name: "Lidah Tengku",
+  },
+
+  {
+    icon: Gerai,
+    name: "Gerai Kita",
   },
   {
-    icon: "vegan",
-    name: "Acmelogo",
+    icon: Benedection,
+    name: "Benedection",
   },
   {
-    icon: "ghost",
-    name: "Acmesponsor",
+    icon: Hatim,
+    name: "Hatim Besari",
   },
   {
-    icon: "puzzle",
-    name: "Acmeipsum",
+    icon: Ali,
+    name: "CCTV",
   },
   {
-    icon: "squirrel",
-    name: "Acme",
+    icon: Ayesha,
+    name: "Ayesha Collection",
   },
   {
-    icon: "cookie",
-    name: "Accmee",
+    icon: PLN,
+    name: "PLN",
   },
-  {
-    icon: "drama",
-    name: "Acmetech",
-  },
+  // {
+  //   icon: "cookie",
+  //   name: "Accmee",
+  // },
+  // {
+  //   icon: "drama",
+  //   name: "Acmetech",
+  // },
 ];
 
 const iconMap: Record<
@@ -76,15 +91,24 @@ const iconMap: Record<
 
     <div class="mx-auto">
       <Marquee
-        class="gap-[3rem]"
+        class="gap-[5rem]"
         :pauseOnHover="true"
         :fade="true"
-        innerClassName="gap-[3rem]"
+        innerClassName="gap-[5rem]"
       >
         <div v-for="{ icon, name } in sponsors" :key="name">
-          <div class="flex items-center text-xl md:text-2xl font-medium">
-            <component :is="iconMap[icon]" class="mr-2" stroke-width="3" />
-            {{ name }}
+          <div
+            class="flex items-center text-xl md:text-2xl font-medium text-center"
+          >
+            <!-- <component :is="iconMap[icon]" class="mr-2" stroke-width="3" /> -->
+            <img
+              :src="icon"
+              alt="Logo Dark"
+              class="h-8 mr-2 w-auto filter grayscale"
+            />
+            <div class="whitespace-nowrap">
+              {{ name }}
+            </div>
           </div>
         </div>
       </Marquee>

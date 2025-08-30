@@ -8,54 +8,58 @@ import { Button } from "@/components/ui/button";
 <template>
   <section class="container">
     <div
-      class="grid place-items-center lg:max-w-screen-xl gap-8 mx-auto pt-20 md:pt-32 pb-12"
+      class="relative h-auto grid place-items-left lg:max-w-screen-xl gap-8 mx-auto my-10 pt-20 md:pt-32 pb-20 rounded-2xl overflow-hidden border"
     >
-      <div class="text-center space-y-8">
-        <!-- <Badge variant="outline" class="text-sm py-2">
-          <span class="mr-2 text-primary">
-            <Badge>New</Badge>
-          </span>
-          <span> Design is out now! </span>
-        </Badge> -->
-
-        <div
-          class="max-w-screen-md mx-auto text-center text-5xl md:text-6xl font-bold"
-        >
-          <h1>Padukan – Solusi Digital untuk Bisnis Anda</h1>
-        </div>
-
-        <p class="max-w-screen-sm mx-auto text-xl text-muted-foreground">
-          Kami menghadirkan berbagai solusi digital modern untuk mempermudah
-          pengelolaan bisnis, meningkatkan efisiensi, serta membantu Anda
-          terhubung lebih baik dengan pelanggan.
-        </p>
-
-        <div class="space-y-4 md:space-y-0 md:space-x-4">
-          <a
-            href="https://wa.me/6282227779880"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="flex items-center justify-center"
+      <div
+        class="absolute inset-0 bg-[url('../assets/background-unsplash.jpg')] bg-cover bg-center blur-sm scale-110 z-0"
+      ></div>
+      <div class="relative z-20">
+        <!-- Your content here -->
+        <div class="text-left space-y-8">
+          <div
+            class="max-w-screen-md ml-8 lg:ml-20 text-left font-bold text-white"
           >
-            <Button
-              class="w-5/6 md:w-1/4 font-bold group/arrow bg-blue-800 hover:bg-blue-900 mt-12"
-            >
-              <img
-                src="@/assets/whatsapp-light.png"
-                alt="Whatsapp"
-                class="w-8 h-8 mr-2 group-hover/arrow:translate-x-1 transition-transform"
-              />
-              Whatsapp Kami
-            </Button>
-          </a>
+            <p class="md:text-5xl text-3xl">Padukan,</p>
+            <p class="md:text-2xl text-xl">Solusi Digital untuk Bisnis Anda</p>
+          </div>
 
-          <!-- <Button as-child variant="secondary" class="w-5/6 md:w-1/4 font-bold">
+          <p
+            class="max-w-screen-sm lg:ml-20 ml-8 text-base md:text-xl text-white pr-3"
+          >
+            Kami menghadirkan berbagai solusi digital modern untuk mempermudah
+            pengelolaan bisnis, meningkatkan efisiensi, serta membantu Anda
+            terhubung lebih baik dengan pelanggan.
+          </p>
+
+          <div
+            class="space-y-4 md:space-y-0 md:space-x-4 place-items-start text-left"
+          >
             <a
-              href="https://github.com/leoMirandaa/shadcn-vue-landing-page.git"
+              href="https://wa.me/6282227779880"
               target="_blank"
-              >Hubungi Kami</a
+              rel="noopener noreferrer"
+              class="flex items-center justify-center"
             >
-          </Button> -->
+              <Button
+                class="w-flex font-bold group/arrow bg-blue-800 hover:bg-blue-900 ml-8 lg:ml-20"
+              >
+                <img
+                  src="@/assets/whatsapp-light.png"
+                  alt="Whatsapp"
+                  class="w-8 h-8 mr-2 group-hover/arrow:translate-x-1 transition-transform"
+                />
+                Whatsapp Kami
+              </Button>
+            </a>
+
+            <!-- <Button as-child variant="secondary" class="w-5/6 md:w-1/4 font-bold">
+          <a
+            href="https://github.com/leoMirandaa/shadcn-vue-landing-page.git"
+            target="_blank"
+            >Hubungi Kami</a
+          >
+        </Button> -->
+          </div>
         </div>
       </div>
 

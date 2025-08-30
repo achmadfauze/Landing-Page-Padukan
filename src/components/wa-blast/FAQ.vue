@@ -51,7 +51,7 @@ const FAQList: FAQProps[] = [
     <div class="text-center mb-8">
       <h2 class="text-lg text-blue-800 text-center mb-2 tracking-wider">FAQ</h2>
 
-      <h2 class="text-3xl md:text-4xl text-center font-bold">
+      <h2 class="text-2xl md:text-4xl text-center font-bold">
         Pertanyaan Umum
       </h2>
     </div>

@@ -3,16 +3,13 @@ import { ref } from "vue";
 
 import { useColorMode } from "@vueuse/core";
 const mode = useColorMode({
-  initialValue: "dark", // default dark
+  initialValue: "light",
 });
-
 import {
   NavigationMenu,
-  NavigationMenuContent,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
-  NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
 import {
   Sheet,
@@ -35,47 +32,11 @@ interface RouteProps {
   label: string;
 }
 
-interface FeatureProps {
-  title: string;
-  description: string;
-  href: string;
-}
-
 const routeList: RouteProps[] = [
-  { href: "/team", label: "Tentang Kami" },
-  { href: "/contact", label: "Hubungi Kami" },
-];
-
-const product: FeatureProps[] = [
-  {
-    title: "Padukan Pos Retail",
-    description: "💳 Kelola penjualan & stok toko dengan mudah.",
-    href: "/posretail",
-  },
-  {
-    title: "Padukan Blast Sonic",
-    description: "📢 Kirim pesan WhatsApp massal lebih cepat.",
-    href: "/wablast",
-  },
-];
-
-const services: FeatureProps[] = [
-  {
-    title: "Periklanan Digital",
-    description:
-      "Strategi Pemasaran online untuk meningkatkan brand awareness.",
-    href: "/iklan-digital",
-  },
-  {
-    title: "Konten Kreatif",
-    description: "Produksi foto, video, desain grafis dan copywriting.",
-    href: "/konten-kreatif",
-  },
-  {
-    title: "Konsultasi Media",
-    description: "Solusi strategis untuk pengelolaan media perusahaan.",
-    href: "/konsultasi-media",
-  },
+  { href: "/produk", label: "Produk" },
+  { href: "/layanan", label: "Layanan" },
+  { href: "/team", label: "Perusahaan" },
+  { href: "/contact", label: "Kontak" },
 ];
 
 const isOpen = ref<boolean>(false);
@@ -86,7 +47,7 @@ const isOpen = ref<boolean>(false);
     :class="{
       'shadow-light': mode === 'light',
       'shadow-dark': mode === 'dark',
-      'w-[90%] md:w-[70%] lg:w-[75%] lg:max-w-screen-xl top-5 mx-auto sticky border z-40 rounded-2xl flex justify-between items-center p-2 px-4 bg-card shadow-md': true,
+      'w-[100%] mx-auto sticky  top-0 z-40  flex justify-between items-center p-2 px-4 bg-white dark:bg-card border-b': true,
     }"
   >
     <RouterLink to="/" class="flex items-center">
@@ -95,14 +56,14 @@ const isOpen = ref<boolean>(false);
         v-if="mode === 'light'"
         src="@/assets/logo-dark.png"
         alt="Logo Light"
-        class="h-6 w-auto mr-2"
+        class="h-5 w-auto mr-2"
       />
 
       <img
         v-else
         src="@/assets/logo-light.png"
         alt="Logo Dark"
-        class="h-6 w-auto mr-2"
+        class="h-5 w-auto mr-2"
       />
     </RouterLink>
 
@@ -126,14 +87,14 @@ const isOpen = ref<boolean>(false);
                     v-if="mode === 'light'"
                     src="@/assets/logo-dark.png"
                     alt="Logo Light"
-                    class="h-6 w-auto mr-2"
+                    class="h-5 w-auto mr-2"
                   />
 
                   <img
                     v-else
                     src="@/assets/logo-light.png"
                     alt="Logo Dark"
-                    class="h-6 w-auto mr-2"
+                    class="h-5 w-auto mr-2"
                   />
                 </RouterLink>
               </SheetTitle>
@@ -166,51 +127,63 @@ const isOpen = ref<boolean>(false);
     <!-- Desktop -->
     <NavigationMenu class="hidden lg:block">
       <NavigationMenuList>
-        <NavigationMenuItem>
+        <!-- <NavigationMenuItem>
           <NavigationMenuTrigger class="bg-card text-base">
             Produk & Layanan
           </NavigationMenuTrigger>
           <NavigationMenuContent>
-            <div class="w-[700px] grid grid-cols-2 gap-5 p-4">
+            <div class="w-[700px] grid grid-cols-3 gap-5 p-4">
               <ul class="flex flex-col gap-2">
+                <div class="border-b border-muted-foreground pb-2 text-sm">
+                  Produk Kami
+                </div>
                 <RouterLink
-                  v-for="{ title, description, href } in product"
+                  v-for="{ title, description, icon, href } in product"
                   :key="title"
                   :to="href"
                 >
                   <li
-                    class="rounded-md p-3 text-sm hover:bg-muted cursor-pointer"
+                    class="rounded-md p-3 text-sm hover:bg-muted cursor-pointer border"
                   >
-                    <p class="mb-1 font-semibold leading-none text-foreground">
-                      {{ title }}
-                    </p>
-                    <p class="line-clamp-2 text-muted-foreground">
-                      {{ description }}
-                    </p>
+                    <div class="flex items-center gap-2">
+                      <img :src="icon" alt="Logo Dark" class="h-5 w-auto" />
+                      <p
+                        class="mb-1 font-semibold leading-none text-foreground"
+                      >
+                        {{ title }}
+                      </p>
+                    </div>
                   </li>
                 </RouterLink>
               </ul>
-              <ul class="flex flex-col gap-2">
-                <RouterLink
-                  v-for="{ title, description, href } in services"
-                  :key="title"
-                  :to="href"
-                >
-                  <li
-                    class="rounded-md p-3 text-sm hover:bg-muted cursor-pointer"
+              <ul class="flex flex-col col-span-2 gap-2">
+                <div class="border-b border-muted-foreground pb-2 text-sm">
+                  Layanan Kami
+                </div>
+                <div class="grid grid-cols-2 gap-2">
+                  <RouterLink
+                    v-for="{ title, description, icon, href } in services"
+                    :key="title"
+                    :to="href"
                   >
-                    <p class="mb-1 font-semibold leading-none text-foreground">
-                      {{ title }}
-                    </p>
-                    <p class="line-clamp-2 text-muted-foreground">
-                      {{ description }}
-                    </p>
-                  </li>
-                </RouterLink>
+                    <li
+                      class="rounded-md p-3 text-sm hover:bg-muted cursor-pointer border"
+                    >
+                      <div class="flex items-center gap-2">
+                        <img :src="icon" alt="Logo Dark" class="h-5 w-auto" />
+                        <p
+                          class="mb-1 font-semibold leading-none text-foreground"
+                        >
+                          {{ title }}
+                        </p>
+                      </div>
+                    </li>
+                  </RouterLink>
+                </div>
               </ul>
             </div>
           </NavigationMenuContent>
-        </NavigationMenuItem>
+        </NavigationMenuItem> -->
 
         <NavigationMenuItem>
           <NavigationMenuLink asChild>
@@ -232,24 +205,6 @@ const isOpen = ref<boolean>(false);
 
     <div class="hidden lg:flex">
       <ToggleTheme />
-
-      <!-- <Button as-child size="sm" variant="ghost">
-        <a href="#" target="_blank">
-          <img
-            v-if="mode === 'light'"
-            src="@/assets/whatsapp.png"
-            alt="Logo Light"
-            class="h-8 w-auto"
-          />
-
-          <img
-            v-else
-            src="@/assets/whatsapp-light.png"
-            alt="Logo Dark"
-            class="h-8 w-auto"
-          />
-        </a>
-      </Button> -->
     </div>
   </header>
 </template>
