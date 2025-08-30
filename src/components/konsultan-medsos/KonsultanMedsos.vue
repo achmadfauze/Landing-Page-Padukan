@@ -135,7 +135,7 @@ const product = {
   </section>
 </template>
 
-<style scoped>
+<!-- <style scoped>
 .img-shadow-animation {
   animation-name: img-shadow-animation;
   animation-iteration-count: infinite;
@@ -172,4 +172,4 @@ const product = {
     @apply border-t-primary/60;
   }
 }
-</style>
+</style> -->
