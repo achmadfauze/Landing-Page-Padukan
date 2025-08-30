@@ -1,8 +1,6 @@
 <script setup lang="ts">
 import KonsultanMedsos from "../../components/konsultan-medsos/KonsultanMedsos.vue";
 import Footer from "../../components/Footer.vue";
-import Pricing from "../../components/web-dev/Pricing.vue";
-import FAQ from "../../components/web-dev/FAQ.vue";
 import Footer2 from "@/components/Footer2.vue";
 </script>
 

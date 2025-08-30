@@ -1,13 +1,5 @@
 <script setup lang="ts">
-import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 import { Check } from "lucide-vue-next";
 
@@ -93,7 +85,7 @@ const plans: PlanProps[] = [
   <section class="py-5">
     <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-4">
       <Card
-        v-for="{ title, price, description, buttonText, benefitList } in plans"
+        v-for="{ title, price, benefitList } in plans"
         :key="title"
         class="text-left"
       >

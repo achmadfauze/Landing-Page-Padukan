@@ -1,8 +1,6 @@
 <script setup lang="ts">
 import KontenKreatif from "../../components/konten-kreatif/KontenKreatif.vue";
 import Footer from "../../components/Footer.vue";
-import Pricing from "../../components/konten-kreatif/Pricing.vue";
-import FAQ from "../../components/konten-kreatif/FAQ.vue";
 import Footer2 from "@/components/Footer2.vue";
 </script>
 

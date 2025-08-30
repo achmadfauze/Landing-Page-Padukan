@@ -2,40 +2,6 @@
 import Card_Service from "@/components/Card_Service.vue";
 import Footer from "@/components/Footer.vue";
 import Footer2 from "@/components/Footer2.vue";
-
-interface ServiceProps {
-  title: string;
-  icon: string;
-  description: string;
-  // href: string;
-}
-
-const services: ServiceProps[] = [
-  {
-    title: "Website Development",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sollicitudin arcu vitae nisi.",
-    icon: "https://via.placeholder.com/100/0000FF/808080?text=Website",
-  },
-  {
-    title: "Mobile Apps Development",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vel tempor eros.",
-    icon: "https://via.placeholder.com/100/008000/FFFFFF?text=Mobile",
-  },
-  {
-    title: "UI/UX Design",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce scelerisque ligula vel.",
-    icon: "https://via.placeholder.com/100/FF6347/FFFFFF?text=UI/UX",
-  },
-  {
-    title: "Search Engine Optimization",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ac turpis ac.",
-    icon: "https://via.placeholder.com/100/FFD700/FFFFFF?text=SEO",
-  },
-];
 </script>
 
 <template>
