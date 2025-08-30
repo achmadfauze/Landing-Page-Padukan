@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import LogoPadukan from "@/assets/logo-blue.png";
-import LogoBlast from "@/assets/logo-sonic.png";
+import LogoBlast from "@/assets/logo-Sonic.png";
 
 interface FeatureProps {
   title: string;
