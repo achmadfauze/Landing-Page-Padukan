@@ -8,15 +8,6 @@ import Gerai from "@/assets/sponsor/gerai_kita.png";
 import Ayesha from "@/assets/sponsor/ayesha.png";
 import Hatim from "@/assets/sponsor/hatim.png";
 import PLN from "@/assets/sponsor/PLN.png";
-import {
-  Crown,
-  Vegan,
-  Ghost,
-  Puzzle,
-  Squirrel,
-  Cookie,
-  Drama,
-} from "lucide-vue-next";
 
 interface sponsorsProps {
   icon: string;
